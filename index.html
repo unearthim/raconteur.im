@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raconteur.im</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F8F7F4; /* Off-White */
+            --text-color: #2E2E2E; /* Charcoal */
+            --accent-color: #A95C3D; /* Burnt Sienna */
+            --meta-text-color: #5A7D8C; /* Slate Blue */
+            --timer-duration: 20s;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Lora', serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #story {
+            /* This clamp() function makes the font size responsive */
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 500;
+            line-height: 1.4;
+            min-height: 200px; /* Prevents layout shift */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.7s ease-in-out;
+            opacity: 0; /* Start hidden */
+        }
+        
+        #story.visible {
+            opacity: 1;
+        }
+        
+        .timer-container {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 2rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 2px;
+            background-color: #e0e0e0;
+            position: relative;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background-color: var(--text-color);
+            width: 0;
+        }
+
+        @keyframes fill-progress {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+
+        .logo {
+            position: absolute;
+            top: 25px;
+            left: 30px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--meta-text-color);
+            letter-spacing: 0.5px;
+        }
+        
+        .logo span {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .unearth-credit {
+            position: absolute;
+            bottom: 25px;
+            right: 30px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--meta-text-color);
+            text-decoration: none;
+        }
+        
+        .unearth-credit span {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="logo">raconteur<span>.im</span></div>
+
+    <div class="container">
+        <p id="story"></p>
+        <div class="timer-container">
+            <div class="progress-bar">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://unearth.im" target="_blank" class="unearth-credit">an <span>unearth.im</span> monument</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const storyElement = document.getElementById('story');
+            const progressFillElement = document.getElementById('progress-fill');
+
+            const stories = [
+                // Collection I: Tales of Tomorrow
+                "Failed star, now grants wishes.", "Sold the spaceship. Kids needed shoes.", "Goodbye, mission control. Thanks for trying.",
+                "The robot's last painting was a sunrise.", "Heirloom seed library, found on Mars.", "Fell in love. The simulation ended.",
+                "Error: Universe not found. Reboot?", "We fixed everything except the people.", "Android dreams of electric sheep again.",
+                "The last message was a recipe.", "Cloned myself. Now I'm the spare.", "Starship for sale, lightly used, haunted.",
+                "Uploaded consciousness, now terribly bored.", "A.I. translation: 'They're all screaming.'", "Sent a letter. Arrived as dust.",
+                "Time traveler seeks less ironic past.", "The city hums a forgotten song.", "Traded my memories for a view.",
+                "We terraformed Earth. It missed us.", "The final broadcast was just static.", "Mars colony requests better coffee makers.",
+                "My other car is a nebula.", "The alien's first word was 'lonely.'", "Built a time machine. Broke yesterday.",
+                "Wanted to be an astronaut. Mopping.", "The stars are silent. I'm shouting.", "My cybernetic arm is still homesick.",
+                "Bought a black hole. Bad investment.", "The moon is a lonely museum.", "I miss the sound of rain.",
+                "The last tree has a paywall.", "My jetpack is in the shop.", "The sun sets in binary now.",
+                "Woke up with a new memory.", "The future is a foreign country.", "Traded my soul for faster wifi.",
+                "My robot dog thinks I'm slow.", "The city breathes in neon light.", "I am fluent in forgotten languages.",
+                "The ocean is just a memory.",
+
+                // Collection II: Echoes of the Heart
+                "I still have the ticket stub.", "The password was their anniversary date.", "His ghost still waters the plants.",
+                "Voicemail full. She stopped calling.", "Unsent letters, read by the dust.", "The last two humans? Awkward first date.",
+                "I love you. Read at 2:15 AM.", "Strangers again, with all my secrets.", "We danced. The record is skipping.",
+                "Found their sweater. Smells like home.", "It wasn't the fall that hurt.", "Held my hand. Let it go.",
+                "He proposed. She said my name.", "Our song came on the radio.", "I erase your number every day.",
+                "Said 'I love you' in morse.", "Two coffees. One for a memory.", "We were a story worth telling.",
+                "The dog still waits by door.", "Forgot my lines when I met you.", "Her laughter is my favorite song.",
+                "I'll tell the stars about you.", "Bought a house for a ghost.", "We met in a library's silence.",
+                "Our story ended mid-sentence.", "I saved your favorite coffee mug.", "Your side of the bed is cold.",
+                "We were a perfect, temporary thing.", "I hear you in the static.", "Sorry, my heart is a fixer-upper.",
+                "Our love story is a ghost story.", "I only exist in your memory.", "The rain sounds like your footsteps.",
+                "I loved you in every lifetime.", "Our forever was shorter than expected.", "I visit you in my dreams.",
+                "You are my favorite unfinished business.", "I see you in every stranger.", "The silence between us is deafening.",
+                "We were almost a masterpiece.",
+
+                // Collection III: Small Infinities
+                "Rainy day. A good book. Perfect.", "Bought a map. It was blank.", "Wrote a better world. Lived there.",
+                "They buried the time capsule yesterday.", "The quiet is the loudest sound.", "It's a beautiful day to start.",
+                "Forgave myself. The sky seemed brighter.", "Chasing deadlines, missing sunsets.", "Planted a garden to feel alive.",
+                "Became the person I needed then.", "The longest journey is taken inward.", "Every exit is an entrance somewhere.",
+                "I am my own unfinished story.", "The future is a blank page.", "Found my courage. It was dusty.",
+                "Old photographs. Strangers I know well.", "Chose the window seat. Always.", "The small kindnesses were the biggest.",
+                "Still learning the steps to this dance.", "Woke up. Breathed in. Breathed out.", "My dreams are my most valuable asset.",
+                "Chasing the horizon is the point.", "The universe is made of stories.", "I collect moments, not things.",
+                "Today's forecast: 100% chance of being.", "My past is a well-read book.", "I am a student of silence.",
+                "The best compass is your intuition.", "I am a cartographer of feelings.", "Found beauty in the broken places.",
+                "My life is a work in progress.", "I am my ancestors' wildest dream.", "The path is made by walking.",
+                "I am learning to trust the journey.", "Let go, or be dragged.", "The only way out is through.",
+                "I am a collection of stories.", "My greatest fear is an unlived life.", "I am a conversation with the universe.",
+                "The destination is the journey itself.",
+
+                // Collection IV: Whispers & Whimsy
+                "The squirrels are planning something. Again.", "My imaginary friend thinks I'm boring.", "Cursed by a wizard. Great wifi.",
+                "I suspect the cat is my landlord.", "Stole the moon. Nowhere to put it.", "I'm not lost, just geographically challenged.",
+                "My life is a superb typo.", "The gargoyle thinks I dress poorly.", "Argued with the GPS. I won.",
+                "My shadow and I have parted ways.", "I am fueled by coffee and spite.", "The dragon is just a misunderstood lizard.",
+                "I think, therefore I am... confused.", "My plants are plotting against me.", "Haunted house for sale. Ghosts extra.",
+                "The circus left. I stayed behind.", "I'm the CEO of overthinking things.", "My rubber duck is judging me.",
+                "I do all my own stunts.", "My therapist is a well-read parrot.", "Time is a construct. I'm late.",
+                "I'm not weird, I'm a limited edition.", "My coffee needs a coffee.", "The void stared back. We high-fived.",
+                "I speak fluent sarcasm and movie quotes.", "My superpower is making snacks disappear.", "Professional overthinker. Inquire within.",
+                "I put the 'pro' in procrastinate.", "The cheese stands alone. I'm with the cheese.", "I'm in a committed relationship with my bed.",
+                "I'm not arguing, I'm just explaining why I'm right.", "My spirit animal is a sloth.", "I'm pretty sure my cat is plotting my demise.",
+                "I'm not lazy, I'm on energy-saving mode.", "I followed my heart. It led me to the fridge.", "My life's purpose is to find the perfect nap.",
+                "I'm not a morning person. Or a night person.", "The adult is an illusion. I'm a tall child.", "I'm not a pessimist. I'm an optimist with experience.",
+                "My patronus is a caffeinated squirrel.",
+
+                // Collection V: The Unwritten
+                "Page one. The cursor is blinking.", "The best stories are lived, not written.", "Seeking a ghostwriter for my life.",
+                "Rewriting my story. Better ending this time.", "My autobiography is a single, smudged word.", "The plot twist was the fine print.",
+                "I live in the margins of books.", "My muse is on a coffee break.", "The first draft is always perfect.",
+                "A library of unfinished symphonies.", "I build worlds out of words.", "The character started writing back.",
+                "The story ends where you begin.", "I'm a typo in the universe.", "The truth is an unreliable narrator.",
+                "Life is the story you tell yourself.", "I'm editing my life's next chapter.", "The poem wrote itself, then left.",
+                "My vocabulary is mostly borrowed.", "The final word has not been written.", "My ideas are better in the shower.",
+                "I'm a curator of beautiful words.", "The story is a key. The lock is you.", "I'm a collector of forgotten words.",
+                "I'm a translator of feelings.", "My life is a first draft.", "I'm a narrator in search of a plot.",
+                "My ink is made of memories.", "The most beautiful stories are true.", "I'm a librarian of untold tales.",
+                "My punctuation is always intentional.", "I'm a ghostwriter for my dreams.", "The best chapters are yet unwritten.",
+                "I'm a writer, therefore I'm a reader.", "My favorite genre is my life.", "I'm a character in my own story.",
+                "I'm a collector of beautiful sentences.", "I'm a writer of my own destiny.", "The story is the shortest distance between two people.",
+                "The end is just another beginning."
+            ];
+
+            let lastStoryIndex = -1;
+            const storyInterval = 20000; // 20 seconds
+
+            function getNextStory() {
+                let newIndex;
+                do {
+                    newIndex = Math.floor(Math.random() * stories.length);
+                } while (newIndex === lastStoryIndex);
+                lastStoryIndex = newIndex;
+                return stories[newIndex];
+            }
+
+            function updateStory() {
+                storyElement.classList.remove('visible');
+
+                setTimeout(() => {
+                    storyElement.textContent = getNextStory();
+                    storyElement.classList.add('visible');
+                }, 700); // Corresponds to the CSS transition duration
+            }
+            
+            function startProgressBar() {
+                progressFillElement.style.animation = 'none';
+                void progressFillElement.offsetWidth; // Trigger reflow
+                progressFillElement.style.animation = `fill-progress ${storyInterval / 1000}s linear`;
+            }
+
+            // --- Initial Setup ---
+            storyElement.textContent = getNextStory();
+            storyElement.classList.add('visible');
+            startProgressBar();
+
+            // Set the interval
+            setInterval(() => {
+                updateStory();
+                startProgressBar();
+            }, storyInterval);
+        });
+    </script>
+</body>
+</html>
+
