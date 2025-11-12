@@ -1,0 +1,21 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Inter:wght@600&display=swap');
+        .story {
+            font-family: 'Lora', serif;
+            font-weight: 500;
+            font-size: 72px;
+            fill: #F8F7F4;
+        }
+        .logo {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 36px;
+        }
+    </style>
+    <rect width="1200" height="630" fill="#0A0E1B"/>
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="story">The universe is made of stories.</text>
+    <text x="50%" y="580" dominant-baseline="middle" text-anchor="middle" class="logo" fill="#5A7D8C">
+        raconteur<tspan fill="#FF8A00">.im</tspan>
+    </text>
+</svg>
