@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,18 @@
     <!-- === 1. Primary Meta Tags === -->
     <title>Six-Word Stories | raconteur.im</title>
     <meta name="title" content="Six-Word Stories | raconteur.im">
-    <meta name="description" content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
-    <meta name="keywords" content="six-word stories, flash fiction, micro-fiction, storytelling, creative writing, short stories, raconteur">
-    <meta name="author" content="raconteur.im (An unearth.im Project)">
+    <meta name="description"
+        content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
+    <meta name="keywords"
+        content="six-word stories, flash fiction, micro-fiction, storytelling, creative writing, short stories, raconteur">
+    <meta name="author" content="raconteur.im (by unearth heritage foundry - archive & anvil - unearth.im)">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
-    
+
     <!-- === Canonical Link === -->
     <link rel="canonical" href="https://raconteur.im" />
-    
+
     <!-- === 2. Webmention Endpoint === -->
     <link rel="webmention" href="https://webmention.io/unearth.im/webmention" />
 
@@ -50,7 +53,8 @@
         {
           "@type": "Organization",
           "@id": "https://unearth.im/#organization",
-          "name": "unearth.im",
+          "name": "Unearth Heritage Foundry",
+"alternateName": ["Unearth Foundry","Archive & Anvil","Unearth Anvil","Unearth Works","Cultural Infrastructure Foundry"],
           "url": "https://unearth.im/",
           "logo": {
             "@type": "ImageObject",
@@ -88,7 +92,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://raconteur.im/">
     <meta property="og:title" content="Six-Word Stories | raconteur.im">
-    <meta property="og:description" content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
+    <meta property="og:description"
+        content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
     <meta property="og:image" content="https://raconteur.im/og-image.png">
     <meta property="og:site_name" content="raconteur.im">
 
@@ -96,7 +101,8 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://raconteur.im/">
     <meta property="twitter:title" content="Six-Word Stories | raconteur.im">
-    <meta property="twitter:description" content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
+    <meta property="twitter:description"
+        content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
     <meta property="twitter:image" content="https://raconteur.im/og-image.png">
 
     <!-- === 5. Favicons === -->
@@ -111,18 +117,25 @@
     <!-- === Fonts === -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
-            --bg-color: #0A0E1B; /* Deep Navy */
-            --text-color: #F8F7F4; /* Off-White */
-            --accent-color: #FF8A00; /* Luminous Ember */
-            --meta-text-color: #5A7D8C; /* Slate Blue */
+            --bg-color: #0A0E1B;
+            /* Deep Navy */
+            --text-color: #F8F7F4;
+            /* Off-White */
+            --accent-color: #FF8A00;
+            /* Luminous Ember */
+            --meta-text-color: #5A7D8C;
+            /* Slate Blue */
             --timer-duration: 20s;
         }
 
-        html, body {
+        html,
+        body {
             height: 100%;
             margin: 0;
             padding: 0;
@@ -152,18 +165,20 @@
             font-size: clamp(2rem, 6vw, 3.5rem);
             font-weight: 500;
             line-height: 1.4;
-            min-height: 200px; /* Prevents layout shift */
+            min-height: 200px;
+            /* Prevents layout shift */
             display: flex;
             align-items: center;
             justify-content: center;
             transition: opacity 0.7s ease-in-out;
-            opacity: 0; /* Start hidden */
+            opacity: 0;
+            /* Start hidden */
         }
-        
+
         #story.visible {
             opacity: 1;
         }
-        
+
         .timer-container {
             width: 100%;
             max-width: 400px;
@@ -184,8 +199,13 @@
         }
 
         @keyframes fill-progress {
-            from { width: 0%; }
-            to { width: 100%; }
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
         }
 
         .logo {
@@ -198,7 +218,7 @@
             color: var(--meta-text-color);
             letter-spacing: 0.5px;
         }
-        
+
         .logo span {
             color: var(--accent-color);
             font-weight: 600;
@@ -213,14 +233,14 @@
             color: var(--meta-text-color);
             text-decoration: none;
         }
-        
+
         .unearth-credit span {
             color: var(--accent-color);
             font-weight: 600;
         }
-
     </style>
 </head>
+
 <body>
 
     <div class="logo">raconteur<span>.im</span></div>
@@ -236,8 +256,11 @@
 
     <div class="unearth-credit" style="text-align: center; margin-top: 40px;">
         <small>
-            a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer">liminal mind meld</a></b> collaboration:<br>
-            digital monument by <b><a href="https://unearth.im" target="_blank" rel="noopener noreferrer"><span>unearth.im</span></a></b> | <b><a href="https://archaeobytology.org" target="_blank" rel="noopener noreferrer">archive & anvil</a></b>
+            a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer">liminal mind
+                    meld</a></b> collaboration:<br>
+            digital monument by <b><a href="https://unearth.im" target="_blank"
+                    rel="noopener noreferrer"><span>unearth.im</span></a></b> | <b><a href="https://archaeobytology.org"
+                    target="_blank" rel="noopener noreferrer">archive & anvil</a></b>
         </small>
     </div>
 
@@ -333,7 +356,7 @@
                 "The algorithm knows me too well.", "My password hint is my autobiography.", "Cloud storage full of digital regrets.",
                 "Screenshot the moment. Missed the moment.", "Notifications turned off. Still feel them.", "My phone knows I'm lying.",
                 "Influencer now. Have influenced nothing.", "The pixels remember what I forgot.", "Livestream ended. Real life continued.",
-                "Swiped left on my own profile.", "My digital footprint is a stampede.", "The internet never forgets. I wish.", 
+                "Swiped left on my own profile.", "My digital footprint is a stampede.", "The internet never forgets. I wish.",
                 "Logged out. Still can't escape myself.", "My feed is someone else's life.", "The like button broke my heart.",
                 "Reply all. Regret immediately.", "My screen time is a confession.", "The cursor blinks. I have nothing.",
                 "Auto-correct ruined my love letter.", "Trending now: my existential crisis.", "The blue light keeps me company.",
@@ -363,7 +386,7 @@
                     storyElement.classList.add('visible');
                 }, 700); // Corresponds to the CSS transition duration
             }
-            
+
             function startProgressBar() {
                 progressFillElement.style.animation = 'none';
                 void progressFillElement.offsetWidth; // Trigger reflow
@@ -383,4 +406,5 @@
         });
     </script>
 </body>
+
 </html>
