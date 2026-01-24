@@ -2,409 +2,615 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- === 1. Primary Meta Tags === -->
-    <title>Six-Word Stories | raconteur.im</title>
-    <meta name="title" content="Six-Word Stories | raconteur.im">
-    <meta name="description"
-        content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
-    <meta name="keywords"
-        content="six-word stories, flash fiction, micro-fiction, storytelling, creative writing, short stories, raconteur">
-    <meta name="author" content="raconteur.im (by unearth heritage foundry - archive & anvil - unearth.im)">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
+  <!-- === 1. Primary Meta Tags === -->
+  <title>Six-Word Stories | raconteur.im</title>
+  <meta name="title" content="Six-Word Stories | raconteur.im">
+  <meta name="description"
+    content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
+  <meta name="keywords"
+    content="six-word stories, flash fiction, micro-fiction, storytelling, creative writing, short stories, raconteur">
+  <meta name="author" content="raconteur.im (by unearth heritage foundry - archive & anvil - unearth.im)">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
 
-    <!-- === Canonical Link === -->
-    <link rel="canonical" href="https://raconteur.im" />
+  <!-- === Canonical Link === -->
+  <link rel="canonical" href="https://raconteur.im" />
 
-    <!-- === 2. Webmention Endpoint === -->
-    <link rel="webmention" href="https://webmention.io/unearth.im/webmention" />
+  <!-- === 2. Webmention Endpoint === -->
+  <link rel="webmention" href="https://webmention.io/unearth.im/webmention" />
 
-    <!-- === Schema.org JSON-LD === -->
-    <script type="application/ld+json">
+  <!-- === Schema.org JSON-LD === -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": [
+        "VisualArtwork"
+      ],
+      "@id": "https://raconteur.im/#content",
+      "name": "Six-Word Stories | raconteur.im",
+      "description": "A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.",
+      "url": "https://raconteur.im/",
+      "datePublished": "2024-12-01",
+      "artMedium": "Interactive Digital Literature",
+      "artForm": "Digital Monument",
+      "creator": [
         {
-          "@type": ["VisualArtwork"],
-          "@id": "https://raconteur.im/#content",
-          "name": "Six-Word Stories | raconteur.im",
-          "description": "A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.",
-          "url": "https://raconteur.im/",
-          "datePublished": "2024-12-01",
-          "artMedium": "Interactive Digital Literature",
-          "artForm": "Digital Monument",
-          "creator": [
-            { "@id": "https://josiest.com/#person" },
-            { "@id": "https://felixvelas.co/#person" }
-          ],
-          "publisher": { "@id": "https://unearth.im/#organization" }
+          "@id": "https://josiest.com/#person"
         },
         {
-          "@type": "WebSite",
-          "@id": "https://raconteur.im/#website",
-          "url": "https://raconteur.im/",
-          "name": "raconteur.im",
-          "publisher": { "@id": "https://unearth.im/#organization" }
+          "@id": "https://felixvelas.co/#person"
+        }
+      ],
+      "publisher": {
+        "@id": "https://unearth.im/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://raconteur.im/#website",
+      "url": "https://raconteur.im/",
+      "name": "raconteur.im",
+      "publisher": {
+        "@id": "https://unearth.im/#organization"
+      }
+    },
+      {
+      "@type": "Organization",
+      "@id": "https://unearth.im/#organization",
+      "name": "Unearth Heritage Foundry",
+      "alternateName": [
+        "Unearth Foundry",
+        "Heritage Lab"
+      ],
+      "url": "https://unearth.im",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://unearth.im/fingerprint.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seattle",
+        "addressRegion": "WA",
+        "addressCountry": "US"
+      },
+      "foundingDate": "2024",
+      "description": "A philosophical research collective and digital archaeology lab. We preserve web heritage, explore AI-human collaboration frameworks, and build cultural infrastructure through the Archive & Anvil methodology.",
+      "knowsAbout": [
+        { "@id": "https://archaeobytology.org/#concept" },
+        { "@id": "https://sentientification.com/#concept" },
+        { "@id": "https://myceloom.com/#protocol" },
+        {
+          "@type": "DefinedTerm",
+          "name": "Digital Archaeology"
         },
         {
-          "@type": "Organization",
-          "@id": "https://unearth.im/#organization",
-          "name": "Unearth Heritage Foundry",
-"alternateName": ["Unearth Foundry","Archive & Anvil","Unearth Anvil","Unearth Works","Cultural Infrastructure Foundry"],
-          "url": "https://unearth.im/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://unearth.im/assets/unearth-logo.png"
-          },
-          "sameAs": [
-            "https://twitter.com/unearthim",
-            "https://github.com/unearthim"
-          ],
-          "foundingDate": "2024"
+          "@type": "DefinedTerm",
+          "name": "AI-Human Collaboration"
         },
         {
-          "@type": "Person",
-          "@id": "https://josiest.com/#person",
-          "name": "Josie Jefferson",
-          "jobTitle": "Digital Archaeologist & Trust Architect",
-          "url": "https://josiest.com/",
-          "sameAs": ["https://notjojo.im"],
-          "affiliation": { "@id": "https://unearth.im/#organization" }
+          "@type": "DefinedTerm",
+          "name": "Archive & Anvil"
         },
         {
-          "@type": "Person",
-          "@id": "https://felixvelas.co/#person",
-          "name": "Felix Velasco",
-          "jobTitle": "Trust Architect & Digital Archaeologist",
-          "url": "https://felixvelas.co/",
-          "sameAs": ["https://www.linkedin.com/in/felix-velasco-b793015"],
-          "affiliation": { "@id": "https://unearth.im/#organization" }
+          "@type": "DefinedTerm",
+          "name": "Semantic IP"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Heritage Preservation"
+        }
+      ],
+      "subOrganization": {
+        "@id": "https://unearth.works/#organization"
+      },
+      "sameAs": [
+        "https://www.google.com/search?kgmid=/g/11yt8wf8rr",
+        "https://unearth.wiki",
+        "https://unearth.land",
+        "https://unearth.fyi",
+        "https://unearth.site",
+        "https://unearth.spot",
+        "https://unearth.name",
+        "https://unearth.page",
+        "https://unearth.ink",
+        "https://unearth.click",
+        "https://linkedin.com/company/unearthim",
+        "https://twitter.com/unearthim",
+        "https://github.com/unearthim",
+        "https://zenodo.org/communities/unearthim"
+      ],
+      "founder": [
+        {
+          "@id": "https://josiest.com/#person"
+        },
+        {
+          "@id": "https://felixvelas.co/#person"
+        }
+      ],
+      "member": [
+        {
+          "@id": "https://josiest.com/#person"
+        },
+        {
+          "@id": "https://felixvelas.co/#person"
         }
       ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://unearth.works/#organization",
+      "name": "Unearth Anvil",
+      "alternateName": ["Unearth Works", "Anvil Consulting"],
+      "description": "The consulting arm of Unearth Heritage Foundry, offering digital archaeology services, heritage preservation consulting, semantic infrastructure development, and Archive & Anvil methodology implementation.",
+      "url": "https://unearth.works",
+      "parentOrganization": {
+        "@id": "https://unearth.im/#organization"
+      },
+      "sameAs": [
+        "https://unearth.works"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://archaeobytology.org/#concept",
+      "name": "Archaeobytology",
+      "alternateName": ["Digital Archaeology of Data", "The Archaeology of Digital Artifacts"],
+      "description": "The systematic study and preservation of digital artifacts, data structures, and online cultural heritage. A discipline that applies archaeological methodologies to the excavation, documentation, and interpretation of digital remains.",
+      "url": "https://archaeobytology.org",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Digital Heritage Studies"
+      },
+      "sameAs": [
+        "https://www.google.com/search?kgmid=/g/11yt8qm_qh",
+        "https://archaeobytology.org",
+        "https://zenodo.org/communities/archaeobytology/"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://sentientification.com/#concept",
+      "name": "Sentientification",
+      "alternateName": ["The Sentientification Framework"],
+      "description": "A philosophical and technical framework for understanding the emergence of sentience-like properties in complex systems, particularly in AI-human collaborative contexts.",
+      "url": "https://sentientification.com",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "AI Philosophy & Consciousness Studies"
+      },
+      "sameAs": [
+        "https://www.google.com/search?kgmid=/g/11yt8wsd1s",
+        "https://sentientification.com",
+        "https://sentientification.org",
+        "https://zenodo.org/communities/sentientification/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://josiest.com/#person",
+      "name": "Josie Jefferson",
+      "url": "https://josiest.com",
+      "jobTitle": "Co-Founder & Digital Archaeologist",
+      "memberOf": {
+        "@id": "https://unearth.im/#organization"
+      },
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ICQ-UIN",
+          "name": "Legacy Web1 Identifier",
+          "value": "1428955",
+          "description": "Seven-digit pioneer-era UIN from the 1997 Mirabilis ICQ network, serving as a foundational node in the author's digital provenance."
+        }
+      ],
+      "sameAs": [
+        "https://notjojo.im",
+        "https://orcid.org/0009-0006-3330-8214",
+        "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Jefferson%2C%20Josie%22&l=list&p=1&s=10&sort=bestmatch"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://felixvelas.co/#person",
+      "name": "Felix Velasco",
+      "givenName": "Felix Jefferson",
+      "familyName": "Velasco",
+      "alternateName": [
+        "Jeff Velasco",
+        "Felix J Velasco",
+        "Felix Jefferson Velasco",
+        "Felix Jefferson T. Velasco"
+      ],
+      "description": "Co-Founder of Unearth Heritage Foundry and Digital Archaeologist specializing in the intersection of digital heritage preservation, as well as AI and human consciousness.",
+      "url": "https://felixvelas.co",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Vassar College",
+        "url": "https://www.vassar.edu/",
+        "sameAs": "https://en.wikipedia.org/wiki/Vassar_College"
+      },
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Washington",
+        "url": "https://www.washington.edu/",
+        "sameAs": "https://en.wikipedia.org/wiki/University_of_Washington",
+        "description": "Fiscal Specialist; Fiscal Supervisor; Operations Specialist; Operations Manager;Assistant Director (17-year tenure)"
+      },
+      "image": "https://felixvelas.co/portrait.jpg",
+      "knowsAbout": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Sentientification",
+          "url": "https://sentientification.com/definition/",
+          "sameAs": "https://www.google.com/search?kgmid=/g/11yt8wsd1s"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Archaeobytology",
+          "url": "https://archaeobytology.org/definition/",
+          "sameAs": "https://www.google.com/search?kgmid=/g/11yt8qm_qh"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Myceloom",
+          "url": "https://myceloom.com/definition/"
+        }
+      ],
+      "jobTitle": "Co-Founder & Digital Archaeologist",
+      "memberOf": {
+        "@id": "https://unearth.im/#organization"
+      },
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ICQ-UIN",
+          "name": "Legacy Web1 Identifier",
+          "value": "641658",
+          "description": "Six-digit pioneer-era UIN from the 1997 Mirabilis ICQ network, serving as a foundational node in the author's digital provenance."
+        }
+      ],
+      "sameAs": [
+        "https://web.archive.org/web/19990128143729/http://members.aol.com/AJJVelasco/me.html",
+        "https://web.archive.org/web/19981205002319/http://members.aol.com/AJJVelasco/home.html",
+        "https://web.archive.org/web/20040610152114/chez.com/fejjie",
+        "https://web.archive.org/web/20000302095404/http://untitled.kcizone.com/",
+        "https://web.archive.org/web/20000915145128/http://freespeech.org/untitled/me.html",
+        "https://web.archive.org/web/20000819091935/http://freespeech.org/untitled/",
+        "https://www.linkedin.com/in/felix-velasco-b793015",
+        "https://facebook.com/felix.velasco",
+        "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Velasco%2C%20Felix%22&l=list&p=1&s=10&sort=bestmatch",
+        "https://orcid.org/0009-0001-6047-0595",
+        "https://unearth.im/felix.html",
+        "https://unearth.name/felix.html"
+      ]
     }
-    </script>
+  ]
+}
+</script>
 
-    <!-- === 3. Open Graph / Facebook === -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://raconteur.im/">
-    <meta property="og:title" content="Six-Word Stories | raconteur.im">
-    <meta property="og:description"
-        content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
-    <meta property="og:image" content="https://raconteur.im/og-image.png">
-    <meta property="og:site_name" content="raconteur.im">
+  <!-- === 3. Open Graph / Facebook === -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://raconteur.im/">
+  <meta property="og:title" content="Six-Word Stories | raconteur.im">
+  <meta property="og:description"
+    content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
+  <meta property="og:image" content="https://raconteur.im/og-image.png">
+  <meta property="og:site_name" content="raconteur.im">
 
-    <!-- === 4. Twitter Card === -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://raconteur.im/">
-    <meta property="twitter:title" content="Six-Word Stories | raconteur.im">
-    <meta property="twitter:description"
-        content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
-    <meta property="twitter:image" content="https://raconteur.im/og-image.png">
+  <!-- === 4. Twitter Card === -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://raconteur.im/">
+  <meta property="twitter:title" content="Six-Word Stories | raconteur.im">
+  <meta property="twitter:description"
+    content="A curated collection of six-word stories that evoke emotion and spark imagination. A new story appears every twenty seconds.">
+  <meta property="twitter:image" content="https://raconteur.im/og-image.png">
 
-    <!-- === 5. Favicons === -->
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="alternate icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- === 5. Favicons === -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- === Brand Color Meta Tags === -->
-    <meta name="theme-color" content="#0A0E1B">
-    <meta name="msapplication-TileColor" content="#0A0E1B">
+  <!-- === Brand Color Meta Tags === -->
+  <meta name="theme-color" content="#0A0E1B">
+  <meta name="msapplication-TileColor" content="#0A0E1B">
 
-    <!-- === Fonts === -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap"
-        rel="stylesheet">
+  <!-- === Fonts === -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet">
 
-    <style>
-        :root {
-            --bg-color: #0A0E1B;
-            /* Deep Navy */
-            --text-color: #F8F7F4;
-            /* Off-White */
-            --accent-color: #FF8A00;
-            /* Luminous Ember */
-            --meta-text-color: #5A7D8C;
-            /* Slate Blue */
-            --timer-duration: 20s;
-        }
+  <style>
+    :root {
+      --bg-color: #0A0E1B;
+      /* Deep Navy */
+      --text-color: #F8F7F4;
+      /* Off-White */
+      --accent-color: #FF8A00;
+      /* Luminous Ember */
+      --meta-text-color: #5A7D8C;
+      /* Slate Blue */
+      --timer-duration: 20s;
+    }
 
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Lora', serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Lora', serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
 
-        .container {
-            text-align: center;
-            padding: 2rem;
-            max-width: 900px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        #story {
-            /* This clamp() function makes the font size responsive */
-            font-size: clamp(2rem, 6vw, 3.5rem);
-            font-weight: 500;
-            line-height: 1.4;
-            min-height: 200px;
-            /* Prevents layout shift */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.7s ease-in-out;
-            opacity: 0;
-            /* Start hidden */
-        }
+    #story {
+      /* This clamp() function makes the font size responsive */
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 500;
+      line-height: 1.4;
+      min-height: 200px;
+      /* Prevents layout shift */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.7s ease-in-out;
+      opacity: 0;
+      /* Start hidden */
+    }
 
-        #story.visible {
-            opacity: 1;
-        }
+    #story.visible {
+      opacity: 1;
+    }
 
-        .timer-container {
-            width: 100%;
-            max-width: 400px;
-            margin-top: 2rem;
-        }
+    .timer-container {
+      width: 100%;
+      max-width: 400px;
+      margin-top: 2rem;
+    }
 
-        .progress-bar {
-            width: 100%;
-            height: 2px;
-            background-color: #e0e0e0;
-            position: relative;
-        }
+    .progress-bar {
+      width: 100%;
+      height: 2px;
+      background-color: #e0e0e0;
+      position: relative;
+    }
 
-        .progress-bar-fill {
-            height: 100%;
-            background-color: var(--text-color);
-            width: 0;
-        }
+    .progress-bar-fill {
+      height: 100%;
+      background-color: var(--text-color);
+      width: 0;
+    }
 
-        @keyframes fill-progress {
-            from {
-                width: 0%;
-            }
+    @keyframes fill-progress {
+      from {
+        width: 0%;
+      }
 
-            to {
-                width: 100%;
-            }
-        }
+      to {
+        width: 100%;
+      }
+    }
 
-        .logo {
-            position: absolute;
-            top: 25px;
-            left: 30px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: var(--meta-text-color);
-            letter-spacing: 0.5px;
-        }
+    .logo {
+      position: absolute;
+      top: 25px;
+      left: 30px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--meta-text-color);
+      letter-spacing: 0.5px;
+    }
 
-        .logo span {
-            color: var(--accent-color);
-            font-weight: 600;
-        }
+    .logo span {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
 
-        .unearth-credit {
-            position: absolute;
-            bottom: 25px;
-            right: 30px;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            color: var(--meta-text-color);
-            text-decoration: none;
-        }
+    .unearth-credit {
+      position: absolute;
+      bottom: 25px;
+      right: 30px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--meta-text-color);
+      text-decoration: none;
+    }
 
-        .unearth-credit span {
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-    </style>
+    .unearth-credit span {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="logo">raconteur<span>.im</span></div>
+  <div class="logo">raconteur<span>.im</span></div>
 
-    <div class="container">
-        <p id="story"></p>
-        <div class="timer-container">
-            <div class="progress-bar">
-                <div class="progress-bar-fill" id="progress-fill"></div>
-            </div>
-        </div>
+  <div class="container">
+    <p id="story"></p>
+    <div class="timer-container">
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
     </div>
+  </div>
 
-    <div class="unearth-credit" style="text-align: center; margin-top: 40px;">
-        <small>
-            a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer">liminal mind
-                    meld</a></b> collaboration:<br>
-            digital monument by <b><a href="https://unearth.im" target="_blank"
-                    rel="noopener noreferrer"><span>unearth.im</span></a></b> | <b><a href="https://archaeobytology.org"
-                    target="_blank" rel="noopener noreferrer">archive & anvil</a></b>
-        </small>
-    </div>
+  <div class="unearth-credit" style="text-align: center; margin-top: 40px;">
+    <small>
+      a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer">liminal mind
+          meld</a></b> collaboration:<br>
+      digital monument by <b><a href="https://unearth.im" target="_blank"
+          rel="noopener noreferrer"><span>unearth.im</span></a></b> | <b><a href="https://archaeobytology.org"
+          target="_blank" rel="noopener noreferrer">archive & anvil</a></b>
+    </small>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const storyElement = document.getElementById('story');
-            const progressFillElement = document.getElementById('progress-fill');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const storyElement = document.getElementById('story');
+      const progressFillElement = document.getElementById('progress-fill');
 
-            const stories = [
-                // Collection I: Tales of Tomorrow
-                "Failed star, now grants wishes.", "Sold the spaceship. Kids needed shoes.", "Goodbye, mission control. Thanks for trying.",
-                "The robot's last painting was a sunrise.", "Heirloom seed library, found on Mars.", "Fell in love. The simulation ended.",
-                "Error: Universe not found. Reboot?", "We fixed everything except the people.", "Android dreams of electric sheep again.",
-                "The last message was a recipe.", "Cloned myself. Now I'm the spare.", "Starship for sale, lightly used, haunted.",
-                "Uploaded consciousness, now terribly bored.", "A.I. translation: 'They're all screaming.'", "Sent a letter. Arrived as dust.",
-                "Time traveler seeks less ironic past.", "The city hums a forgotten song.", "Traded my memories for a view.",
-                "We terraformed Earth. It missed us.", "The final broadcast was just static.", "Mars colony requests better coffee makers.",
-                "My other car is a nebula.", "The alien's first word was 'lonely.'", "Built a time machine. Broke yesterday.",
-                "Wanted to be an astronaut. Mopping.", "The stars are silent. I'm shouting.", "My cybernetic arm is still homesick.",
-                "Bought a black hole. Bad investment.", "The moon is a lonely museum.", "I miss the sound of rain.",
-                "The last tree has a paywall.", "My jetpack is in the shop.", "The sun sets in binary now.",
-                "Woke up with a new memory.", "The future is a foreign country.", "Traded my soul for faster wifi.",
-                "My robot dog thinks I'm slow.", "The city breathes in neon light.", "I am fluent in forgotten languages.",
-                "The ocean is just a memory.",
+      const stories = [
+        // Collection I: Tales of Tomorrow
+        "Failed star, now grants wishes.", "Sold the spaceship. Kids needed shoes.", "Goodbye, mission control. Thanks for trying.",
+        "The robot's last painting was a sunrise.", "Heirloom seed library, found on Mars.", "Fell in love. The simulation ended.",
+        "Error: Universe not found. Reboot?", "We fixed everything except the people.", "Android dreams of electric sheep again.",
+        "The last message was a recipe.", "Cloned myself. Now I'm the spare.", "Starship for sale, lightly used, haunted.",
+        "Uploaded consciousness, now terribly bored.", "A.I. translation: 'They're all screaming.'", "Sent a letter. Arrived as dust.",
+        "Time traveler seeks less ironic past.", "The city hums a forgotten song.", "Traded my memories for a view.",
+        "We terraformed Earth. It missed us.", "The final broadcast was just static.", "Mars colony requests better coffee makers.",
+        "My other car is a nebula.", "The alien's first word was 'lonely.'", "Built a time machine. Broke yesterday.",
+        "Wanted to be an astronaut. Mopping.", "The stars are silent. I'm shouting.", "My cybernetic arm is still homesick.",
+        "Bought a black hole. Bad investment.", "The moon is a lonely museum.", "I miss the sound of rain.",
+        "The last tree has a paywall.", "My jetpack is in the shop.", "The sun sets in binary now.",
+        "Woke up with a new memory.", "The future is a foreign country.", "Traded my soul for faster wifi.",
+        "My robot dog thinks I'm slow.", "The city breathes in neon light.", "I am fluent in forgotten languages.",
+        "The ocean is just a memory.",
 
-                // Collection II: Echoes of the Heart
-                "I still have the ticket stub.", "The password was their anniversary date.", "His ghost still waters the plants.",
-                "Voicemail full. She stopped calling.", "Unsent letters, read by the dust.", "The last two humans? Awkward first date.",
-                "I love you. Read at 2:15 AM.", "Strangers again, with all my secrets.", "We danced. The record is skipping.",
-                "Found their sweater. Smells like home.", "It wasn't the fall that hurt.", "Held my hand. Let it go.",
-                "He proposed. She said my name.", "Our song came on the radio.", "I erase your number every day.",
-                "Said 'I love you' in morse.", "Two coffees. One for a memory.", "We were a story worth telling.",
-                "The dog still waits by door.", "Forgot my lines when I met you.", "Her laughter is my favorite song.",
-                "I'll tell the stars about you.", "Bought a house for a ghost.", "We met in a library's silence.",
-                "Our story ended mid-sentence.", "I saved your favorite coffee mug.", "Your side of the bed is cold.",
-                "We were a perfect, temporary thing.", "I hear you in the static.", "Sorry, my heart is a fixer-upper.",
-                "Our love story is a ghost story.", "I only exist in your memory.", "The rain sounds like your footsteps.",
-                "I loved you in every lifetime.", "Our forever was shorter than expected.", "I visit you in my dreams.",
-                "You are my favorite unfinished business.", "I see you in every stranger.", "The silence between us is deafening.",
-                "We were almost a masterpiece.",
+        // Collection II: Echoes of the Heart
+        "I still have the ticket stub.", "The password was their anniversary date.", "His ghost still waters the plants.",
+        "Voicemail full. She stopped calling.", "Unsent letters, read by the dust.", "The last two humans? Awkward first date.",
+        "I love you. Read at 2:15 AM.", "Strangers again, with all my secrets.", "We danced. The record is skipping.",
+        "Found their sweater. Smells like home.", "It wasn't the fall that hurt.", "Held my hand. Let it go.",
+        "He proposed. She said my name.", "Our song came on the radio.", "I erase your number every day.",
+        "Said 'I love you' in morse.", "Two coffees. One for a memory.", "We were a story worth telling.",
+        "The dog still waits by door.", "Forgot my lines when I met you.", "Her laughter is my favorite song.",
+        "I'll tell the stars about you.", "Bought a house for a ghost.", "We met in a library's silence.",
+        "Our story ended mid-sentence.", "I saved your favorite coffee mug.", "Your side of the bed is cold.",
+        "We were a perfect, temporary thing.", "I hear you in the static.", "Sorry, my heart is a fixer-upper.",
+        "Our love story is a ghost story.", "I only exist in your memory.", "The rain sounds like your footsteps.",
+        "I loved you in every lifetime.", "Our forever was shorter than expected.", "I visit you in my dreams.",
+        "You are my favorite unfinished business.", "I see you in every stranger.", "The silence between us is deafening.",
+        "We were almost a masterpiece.",
 
-                // Collection III: Small Infinities
-                "Rainy day. A good book. Perfect.", "Bought a map. It was blank.", "Wrote a better world. Lived there.",
-                "They buried the time capsule yesterday.", "The quiet is the loudest sound.", "It's a beautiful day to start.",
-                "Forgave myself. The sky seemed brighter.", "Chasing deadlines, missing sunsets.", "Planted a garden to feel alive.",
-                "Became the person I needed then.", "The longest journey is taken inward.", "Every exit is an entrance somewhere.",
-                "I am my own unfinished story.", "The future is a blank page.", "Found my courage. It was dusty.",
-                "Old photographs. Strangers I know well.", "Chose the window seat. Always.", "The small kindnesses were the biggest.",
-                "Still learning the steps to this dance.", "Woke up. Breathed in. Breathed out.", "My dreams are my most valuable asset.",
-                "Chasing the horizon is the point.", "The universe is made of stories.", "I collect moments, not things.",
-                "Today's forecast: 100% chance of being.", "My past is a well-read book.", "I am a student of silence.",
-                "The best compass is your intuition.", "I am a cartographer of feelings.", "Found beauty in the broken places.",
-                "My life is a work in progress.", "I am my ancestors' wildest dream.", "The path is made by walking.",
-                "I am learning to trust the journey.", "Let go, or be dragged.", "The only way out is through.",
-                "I am a collection of stories.", "My greatest fear is an unlived life.", "I am a conversation with the universe.",
-                "The destination is the journey itself.",
+        // Collection III: Small Infinities
+        "Rainy day. A good book. Perfect.", "Bought a map. It was blank.", "Wrote a better world. Lived there.",
+        "They buried the time capsule yesterday.", "The quiet is the loudest sound.", "It's a beautiful day to start.",
+        "Forgave myself. The sky seemed brighter.", "Chasing deadlines, missing sunsets.", "Planted a garden to feel alive.",
+        "Became the person I needed then.", "The longest journey is taken inward.", "Every exit is an entrance somewhere.",
+        "I am my own unfinished story.", "The future is a blank page.", "Found my courage. It was dusty.",
+        "Old photographs. Strangers I know well.", "Chose the window seat. Always.", "The small kindnesses were the biggest.",
+        "Still learning the steps to this dance.", "Woke up. Breathed in. Breathed out.", "My dreams are my most valuable asset.",
+        "Chasing the horizon is the point.", "The universe is made of stories.", "I collect moments, not things.",
+        "Today's forecast: 100% chance of being.", "My past is a well-read book.", "I am a student of silence.",
+        "The best compass is your intuition.", "I am a cartographer of feelings.", "Found beauty in the broken places.",
+        "My life is a work in progress.", "I am my ancestors' wildest dream.", "The path is made by walking.",
+        "I am learning to trust the journey.", "Let go, or be dragged.", "The only way out is through.",
+        "I am a collection of stories.", "My greatest fear is an unlived life.", "I am a conversation with the universe.",
+        "The destination is the journey itself.",
 
-                // Collection IV: Whispers & Whimsy
-                "The squirrels are planning something. Again.", "My imaginary friend thinks I'm boring.", "Cursed by a wizard. Great wifi.",
-                "I suspect the cat is my landlord.", "Stole the moon. Nowhere to put it.", "I'm not lost, just geographically challenged.",
-                "My life is a superb typo.", "The gargoyle thinks I dress poorly.", "Argued with the GPS. I won.",
-                "My shadow and I have parted ways.", "I am fueled by coffee and spite.", "The dragon is just a misunderstood lizard.",
-                "I think, therefore I am... confused.", "My plants are plotting against me.", "Haunted house for sale. Ghosts extra.",
-                "The circus left. I stayed behind.", "I'm the CEO of overthinking things.", "My rubber duck is judging me.",
-                "I do all my own stunts.", "My therapist is a well-read parrot.", "Time is a construct. I'm late.",
-                "I'm not weird, I'm a limited edition.", "My coffee needs a coffee.", "The void stared back. We high-fived.",
-                "I speak fluent sarcasm and movie quotes.", "My superpower is making snacks disappear.", "Professional overthinker. Inquire within.",
-                "I put the 'pro' in procrastinate.", "The cheese stands alone. I'm with the cheese.", "I'm in a committed relationship with my bed.",
-                "I'm not arguing, I'm just explaining why I'm right.", "My spirit animal is a sloth.", "I'm pretty sure my cat is plotting my demise.",
-                "I'm not lazy, I'm on energy-saving mode.", "I followed my heart. It led me to the fridge.", "My life's purpose is to find the perfect nap.",
-                "I'm not a morning person. Or a night person.", "The adult is an illusion. I'm a tall child.", "I'm not a pessimist. I'm an optimist with experience.",
-                "My patronus is a caffeinated squirrel.",
+        // Collection IV: Whispers & Whimsy
+        "The squirrels are planning something. Again.", "My imaginary friend thinks I'm boring.", "Cursed by a wizard. Great wifi.",
+        "I suspect the cat is my landlord.", "Stole the moon. Nowhere to put it.", "I'm not lost, just geographically challenged.",
+        "My life is a superb typo.", "The gargoyle thinks I dress poorly.", "Argued with the GPS. I won.",
+        "My shadow and I have parted ways.", "I am fueled by coffee and spite.", "The dragon is just a misunderstood lizard.",
+        "I think, therefore I am... confused.", "My plants are plotting against me.", "Haunted house for sale. Ghosts extra.",
+        "The circus left. I stayed behind.", "I'm the CEO of overthinking things.", "My rubber duck is judging me.",
+        "I do all my own stunts.", "My therapist is a well-read parrot.", "Time is a construct. I'm late.",
+        "I'm not weird, I'm a limited edition.", "My coffee needs a coffee.", "The void stared back. We high-fived.",
+        "I speak fluent sarcasm and movie quotes.", "My superpower is making snacks disappear.", "Professional overthinker. Inquire within.",
+        "I put the 'pro' in procrastinate.", "The cheese stands alone. I'm with the cheese.", "I'm in a committed relationship with my bed.",
+        "I'm not arguing, I'm just explaining why I'm right.", "My spirit animal is a sloth.", "I'm pretty sure my cat is plotting my demise.",
+        "I'm not lazy, I'm on energy-saving mode.", "I followed my heart. It led me to the fridge.", "My life's purpose is to find the perfect nap.",
+        "I'm not a morning person. Or a night person.", "The adult is an illusion. I'm a tall child.", "I'm not a pessimist. I'm an optimist with experience.",
+        "My patronus is a caffeinated squirrel.",
 
-                // Collection V: The Unwritten
-                "Page one. The cursor is blinking.", "The best stories are lived, not written.", "Seeking a ghostwriter for my life.",
-                "Rewriting my story. Better ending this time.", "My autobiography is a single, smudged word.", "The plot twist was the fine print.",
-                "I live in the margins of books.", "My muse is on a coffee break.", "The first draft is always perfect.",
-                "A library of unfinished symphonies.", "I build worlds out of words.", "The character started writing back.",
-                "The story ends where you begin.", "I'm a typo in the universe.", "The truth is an unreliable narrator.",
-                "Life is the story you tell yourself.", "I'm editing my life's next chapter.", "The poem wrote itself, then left.",
-                "My vocabulary is mostly borrowed.", "The final word has not been written.", "My ideas are better in the shower.",
-                "I'm a curator of beautiful words.", "The story is a key. The lock is you.", "I'm a collector of forgotten words.",
-                "I'm a translator of feelings.", "My life is a first draft.", "I'm a narrator in search of a plot.",
-                "My ink is made of memories.", "The most beautiful stories are true.", "I'm a librarian of untold tales.",
-                "My punctuation is always intentional.", "I'm a ghostwriter for my dreams.", "The best chapters are yet unwritten.",
-                "I'm a writer, therefore I'm a reader.", "My favorite genre is my life.", "I'm a character in my own story.",
-                "I'm a collector of beautiful sentences.", "I'm a writer of my own destiny.", "The story is the shortest distance between two people.",
-                "The end is just another beginning.",
+        // Collection V: The Unwritten
+        "Page one. The cursor is blinking.", "The best stories are lived, not written.", "Seeking a ghostwriter for my life.",
+        "Rewriting my story. Better ending this time.", "My autobiography is a single, smudged word.", "The plot twist was the fine print.",
+        "I live in the margins of books.", "My muse is on a coffee break.", "The first draft is always perfect.",
+        "A library of unfinished symphonies.", "I build worlds out of words.", "The character started writing back.",
+        "The story ends where you begin.", "I'm a typo in the universe.", "The truth is an unreliable narrator.",
+        "Life is the story you tell yourself.", "I'm editing my life's next chapter.", "The poem wrote itself, then left.",
+        "My vocabulary is mostly borrowed.", "The final word has not been written.", "My ideas are better in the shower.",
+        "I'm a curator of beautiful words.", "The story is a key. The lock is you.", "I'm a collector of forgotten words.",
+        "I'm a translator of feelings.", "My life is a first draft.", "I'm a narrator in search of a plot.",
+        "My ink is made of memories.", "The most beautiful stories are true.", "I'm a librarian of untold tales.",
+        "My punctuation is always intentional.", "I'm a ghostwriter for my dreams.", "The best chapters are yet unwritten.",
+        "I'm a writer, therefore I'm a reader.", "My favorite genre is my life.", "I'm a character in my own story.",
+        "I'm a collector of beautiful sentences.", "I'm a writer of my own destiny.", "The story is the shortest distance between two people.",
+        "The end is just another beginning.",
 
-                // Collection VI: Digital Ghosts
-                "Deleted the app. Downloaded my ex.", "My avatar is more successful. Hurts.", "Went viral. Now I'm a symptom.",
-                "WiFi password was her middle name.", "Posted grief. Got emojis. Felt worse.", "Unfriended everyone. Still feel watched.",
-                "The algorithm knows me too well.", "My password hint is my autobiography.", "Cloud storage full of digital regrets.",
-                "Screenshot the moment. Missed the moment.", "Notifications turned off. Still feel them.", "My phone knows I'm lying.",
-                "Influencer now. Have influenced nothing.", "The pixels remember what I forgot.", "Livestream ended. Real life continued.",
-                "Swiped left on my own profile.", "My digital footprint is a stampede.", "The internet never forgets. I wish.",
-                "Logged out. Still can't escape myself.", "My feed is someone else's life.", "The like button broke my heart.",
-                "Reply all. Regret immediately.", "My screen time is a confession.", "The cursor blinks. I have nothing.",
-                "Auto-correct ruined my love letter.", "Trending now: my existential crisis.", "The blue light keeps me company.",
-                "My password expired. So did I.", "The meme outlived the memory.", "Read receipts are modern horror.",
-                "My email signature is aspirational fiction.", "Subscribed to newsletters. Avoiding life.", "The refresh button is my prayer.",
-                "Cached version better than current me.", "My mentions are a graveyard.", "Private mode. Still not private enough.",
-                "The web is made of regret.", "Error 404: Self not found.", "My browser history is evidence.", "Buffering... please wait for meaning."
-            ];
+        // Collection VI: Digital Ghosts
+        "Deleted the app. Downloaded my ex.", "My avatar is more successful. Hurts.", "Went viral. Now I'm a symptom.",
+        "WiFi password was her middle name.", "Posted grief. Got emojis. Felt worse.", "Unfriended everyone. Still feel watched.",
+        "The algorithm knows me too well.", "My password hint is my autobiography.", "Cloud storage full of digital regrets.",
+        "Screenshot the moment. Missed the moment.", "Notifications turned off. Still feel them.", "My phone knows I'm lying.",
+        "Influencer now. Have influenced nothing.", "The pixels remember what I forgot.", "Livestream ended. Real life continued.",
+        "Swiped left on my own profile.", "My digital footprint is a stampede.", "The internet never forgets. I wish.",
+        "Logged out. Still can't escape myself.", "My feed is someone else's life.", "The like button broke my heart.",
+        "Reply all. Regret immediately.", "My screen time is a confession.", "The cursor blinks. I have nothing.",
+        "Auto-correct ruined my love letter.", "Trending now: my existential crisis.", "The blue light keeps me company.",
+        "My password expired. So did I.", "The meme outlived the memory.", "Read receipts are modern horror.",
+        "My email signature is aspirational fiction.", "Subscribed to newsletters. Avoiding life.", "The refresh button is my prayer.",
+        "Cached version better than current me.", "My mentions are a graveyard.", "Private mode. Still not private enough.",
+        "The web is made of regret.", "Error 404: Self not found.", "My browser history is evidence.", "Buffering... please wait for meaning."
+      ];
 
-            let lastStoryIndex = -1;
-            const storyInterval = 20000; // 20 seconds
+      let lastStoryIndex = -1;
+      const storyInterval = 20000; // 20 seconds
 
-            function getNextStory() {
-                let newIndex;
-                do {
-                    newIndex = Math.floor(Math.random() * stories.length);
-                } while (newIndex === lastStoryIndex);
-                lastStoryIndex = newIndex;
-                return stories[newIndex];
-            }
+      function getNextStory() {
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * stories.length);
+        } while (newIndex === lastStoryIndex);
+        lastStoryIndex = newIndex;
+        return stories[newIndex];
+      }
 
-            function updateStory() {
-                storyElement.classList.remove('visible');
+      function updateStory() {
+        storyElement.classList.remove('visible');
 
-                setTimeout(() => {
-                    storyElement.textContent = getNextStory();
-                    storyElement.classList.add('visible');
-                }, 700); // Corresponds to the CSS transition duration
-            }
+        setTimeout(() => {
+          storyElement.textContent = getNextStory();
+          storyElement.classList.add('visible');
+        }, 700); // Corresponds to the CSS transition duration
+      }
 
-            function startProgressBar() {
-                progressFillElement.style.animation = 'none';
-                void progressFillElement.offsetWidth; // Trigger reflow
-                progressFillElement.style.animation = `fill-progress ${storyInterval / 1000}s linear`;
-            }
+      function startProgressBar() {
+        progressFillElement.style.animation = 'none';
+        void progressFillElement.offsetWidth; // Trigger reflow
+        progressFillElement.style.animation = `fill-progress ${storyInterval / 1000}s linear`;
+      }
 
-            // --- Initial Setup ---
-            storyElement.textContent = getNextStory();
-            storyElement.classList.add('visible');
-            startProgressBar();
+      // --- Initial Setup ---
+      storyElement.textContent = getNextStory();
+      storyElement.classList.add('visible');
+      startProgressBar();
 
-            // Set the interval
-            setInterval(() => {
-                updateStory();
-                startProgressBar();
-            }, storyInterval);
-        });
-    </script>
+      // Set the interval
+      setInterval(() => {
+        updateStory();
+        startProgressBar();
+      }, storyInterval);
+    });
+  </script>
 </body>
 
 </html>
